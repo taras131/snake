@@ -1,7 +1,7 @@
 .container{
     width: 700px;
     margin: 0 auto;
-    padding: 10px;
+    padding: 20px;
     position: relative;
     background-color: #cecbd4;
     border-radius: 4px;
@@ -32,12 +32,11 @@
 }
 
 .snake_head{
-    background: url("../icons/snake.png") center center/cover no-repeat;
+    background-color: blue;
     border-radius: 100%;
 }
 
 .snake_body{
-    background: url("../icons/snake_body.png.png") center center/cover no-repeat;
     background-color:  green;
     border-radius: 5px;
 }
@@ -69,7 +68,7 @@
     align-items: center;
     border-radius: 4px;
     cursor: pointer;
-    box-shadow: 0 0 5px 2px;
+    box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
 }
 
 .buttons .buttonmidle {
@@ -104,5 +103,16 @@
 }
 
 .obstacle {
-    background: url(http://pngimg.com/uploads/poop/poop_PNG52.png) center center/cover no-repeat;
+    background: url(../icons/obstacle.png) center center/cover no-repeat;
+}
+
+@media(max-width: 576px){
+    .container{
+        width: 500px;
+    }
+}
+@media(max-width: 1140px){
+    .container{
+        width: 800px;
+    }
 }
