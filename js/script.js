@@ -36,11 +36,12 @@ for(let i = 0 ; i < 31; i++) {
 selectModifier();
 
 const interval = setInterval(isLive,300);
-const appleinterval = setInterval(createApple,4000);       
+const appleinterval = setInterval(createApple,4000);
+   
 
 function gameStep() {
-    renderSnake(); 
-    calculationSnake();      
+    calculationSnake();     
+    renderSnake();       
 }
 
 function calculationSnake(){
