@@ -2,14 +2,29 @@
     width: 700px;
     margin: 0 auto;
     padding: 10px;
+    position: relative;
+    background-color: #cecbd4;
+    border-radius: 4px;
+}
+
+.score{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 900;
 }
 
 .gameboard {
+    margin-top: 20px;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     height: 700px;
+    background-color: #fff;
     border: solid;
+    border-radius: 4px;
 }
 
 .gameboard .box {
@@ -17,13 +32,23 @@
 }
 
 .snake_head{
-    background-color: blue;
+    background: url("../icons/snake.png") center center/cover no-repeat;
     border-radius: 100%;
 }
 
 .snake_body{
-    background-color: green;
+    background: url("../icons/snake_body.png.png") center center/cover no-repeat;
+    background-color:  green;
     border-radius: 5px;
+}
+
+.apple{
+    background: url("../icons/apple.png") center center/cover no-repeat;
+}
+
+.fail{
+    transition: all 2s;
+    background-color: red;
 }
 
 .buttons{
@@ -36,14 +61,15 @@
 }
 
 .buttons .button_item {
-    width: 50px;
-    height: 50px;
-    background-color: gray;
+    width: 150px;
+    height: 150px;
+    background-color: #703fd9;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 4px;
     cursor: pointer;
+    box-shadow: 0 0 5px 2px;
 }
 
 .buttons .buttonmidle {
@@ -53,10 +79,30 @@
 
 .buttons .buttonnone{
     border: none;
-    background-color: white;
+    box-shadow: none;
+    background-color: #cecbd4;
 }
 
 .buttonbottom{
     margin: 0 auto;
 }
 
+.newgamebutton{
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 6px;
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.obstacle {
+    background: url(http://pngimg.com/uploads/poop/poop_PNG52.png) center center/cover no-repeat;
+}
