@@ -197,7 +197,7 @@ function fail(){
     const newgamebutton = document.createElement(`div`);
     newgamebutton.classList.add(`newgamebutton`);
     
-    newgamebutton.innerText = `Начать новую игру`;
+    newgamebutton.innerText = `Новая игра`;
     container.append(newgamebutton);
     newgamebutton.addEventListener(`click`, ()=>{
         window.location.reload();
